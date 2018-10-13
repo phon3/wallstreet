@@ -56,7 +56,7 @@ class Stock:
     _G_API = 'http://finance.google.com/finance'
     _Y_API = 'https://query2.finance.yahoo.com/v7/finance/options/'
 
-    def __init__(self, quote, exchange=None, source='google'):
+    def __init__(self, quote, exchange=None, source='yahoo'):
         quote = quote.upper()
         self._attempted_ticker = quote
         self._attempted_exchange = exchange
