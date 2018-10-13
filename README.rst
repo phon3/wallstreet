@@ -2,9 +2,38 @@ Wallstreet: Real time Stock and Option tools
 --------------------------------------------
 
 Wallstreet is a Python 3 library for monitoring and analyzing real time Stock and
-Option data. Quotes are provided from the Google Finance API. Wallstreet requires
+Option data. Quotes are provided from the Yahoo Finance API. Wallstreet requires
 minimal input from the user, it uses available online data to calculate option
 greeks and even scrapes the US Treasury website to get the current risk free rate.
+
+
+TODO
+-------
+- Integrate new source ( since google shutdown )
+- Save to DB
+- Create Web Interface
+- Create Heatmap out of greeks
+- Simple Display via CLI and/or GUI
+
+
+Installation
+------------
+Simply
+
+.. code-block:: bash
+
+    $ pip3 install wallstreet
+    $ cd wallstreet
+    $ export PYTHONPATH=.
+
+
+
+
+Dependencies
+------------
+
+Wallstreet requires Scipy, requests and bs4 (BeautifulSoup4). Requests and bs4 are
+installed for you when pip installing but you need to have Scipy pre-installed.
 
 
 Usage
@@ -75,20 +104,6 @@ Yahoo Finance Support (keep in mind that YF quotes might be delayed):
     No options listed for given date, using '26-05-2017' instead
     No option for given strike, using 155 instead
 
-Installation
-------------
-Simply
-
-.. code-block:: bash
-
-    $ pip install wallstreet
-
-
-Dependencies
-------------
-
-Wallstreet requires Scipy, requests and bs4 (BeautifulSoup4). Requests and bs4 are
-installed for you when pip installing but you need to have Scipy pre-installed.
 
 
 Stock Attributes
